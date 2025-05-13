@@ -29,7 +29,9 @@ npm install
 npm run build
 ```
 
-## 設定方法
+## 使い方
+
+## mcp.json での設定
 
 ```json
 {
@@ -42,3 +44,7 @@ npm run build
   }
 }
 ```
+
+### 使用例
+
+![image](./img/example.png)
