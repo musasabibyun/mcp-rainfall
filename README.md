@@ -12,8 +12,8 @@ Yahoo! の天気情報 API を使用した降水量データを提供する Mode
 ## 前提条件
 
 - Node.js 18 以上
-- Yahoo!デベロッパーネットワークの API キー
-  - [Yahoo!デベロッパーネットワーク](https://developer.yahoo.co.jp/)で取得できます
+- Yahoo! デベロッパーネットワークの API キー
+  - [Yahoo! デベロッパーネットワーク](https://developer.yahoo.co.jp/)で取得できます
 
 ## インストール
 
