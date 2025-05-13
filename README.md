@@ -33,7 +33,7 @@ npm run build
 
 ```json
 {
-  "weather": {
+  "mcp-rainfall": {
     "command": "node",
     "args": [
       "/path/to/mcp-rainfall/build/index.js",
