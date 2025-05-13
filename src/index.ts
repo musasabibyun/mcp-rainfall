@@ -65,20 +65,20 @@ async function fetchWeatherV1Place<T>(
   }
 }
 
-interface WeatherData {
-  Feature?: Array<{
-    Name?: string;
-    Geometry?: {
-      Type?: string;
-      Coordinates?: string;
+interface WeatherDataResponse {
+  Feature: Array<{
+    Name: string;
+    Geometry: {
+      Type: string;
+      Coordinates: string;
     };
-    Property?: {
-      WeatherAreaCode?: string;
-      WeatherList?: {
-        Weather?: Array<{
-          Type?: string;
-          Date?: string;
-          Rainfall?: number;
+    Property: {
+      WeatherAreaCode: string;
+      WeatherList: {
+        Weather: Array<{
+          Type: string;
+          Date: string;
+          Rainfall: number;
         }>;
       };
     };
@@ -102,7 +102,9 @@ server.tool(
   },
   async ({ longitude, latitude }) => {
     const coordinates = `${longitude.toFixed(5)},${latitude.toFixed(5)}`;
-    const weatherData = await fetchWeatherV1Place<WeatherData>(coordinates);
+    const weatherData = await fetchWeatherV1Place<WeatherDataResponse>(
+      coordinates
+    );
 
     if (
       !weatherData ||
@@ -176,9 +178,12 @@ server.tool(
   },
   async ({ longitude, latitude, past }) => {
     const coordinates = `${longitude.toFixed(5)},${latitude.toFixed(5)}`;
-    const weatherData = await fetchWeatherV1Place<WeatherData>(coordinates, {
-      past: past.toString(),
-    });
+    const weatherData = await fetchWeatherV1Place<WeatherDataResponse>(
+      coordinates,
+      {
+        past: past.toString(),
+      }
+    );
 
     if (
       !weatherData ||
