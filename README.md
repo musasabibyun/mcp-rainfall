@@ -1,6 +1,6 @@
 # 降水量 MCP サーバー
 
-Yahoo!の天気情報 API を使用した降水量データを提供する Model Context Protocol (MCP) サーバーです。
+Yahoo! の天気情報 API を使用した降水量データを提供する Model Context Protocol (MCP) サーバーです。
 
 ## 機能
 
