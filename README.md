@@ -18,7 +18,7 @@ Yahoo!の天気情報 API を使用した降水量データを提供する Model
 ## インストール
 
 ```bash
-git clone https://github.com/yourusername/mcp-rainfall.git
+git clone git@github.com:musasabibyun/mcp-rainfall.git
 cd mcp-rainfall
 npm install
 ```
@@ -29,19 +29,7 @@ npm install
 npm run build
 ```
 
-## 使い方
-
-### コマンドラインからの実行
-
-```bash
-# 開発環境での実行
-node --loader ts-node/esm src/index.ts --yahoo-app-id=YOUR_API_KEY
-
-# ビルド後の実行
-node build/index.js --yahoo-app-id=YOUR_API_KEY
-```
-
-### mcp.json での設定例
+## 設定方法
 
 ```json
 {
@@ -54,36 +42,3 @@ node build/index.js --yahoo-app-id=YOUR_API_KEY
   }
 }
 ```
-
-## MCP ツールの利用例
-
-### get-rainfall
-
-緯度・経度を指定して現在と予測の降水強度を取得します。
-
-```json
-{
-  "longitude": 139.7673,
-  "latitude": 35.6809
-}
-```
-
-### get-rainfall-past
-
-過去の降水強度データを取得します。`past`パラメータには 1 または 2 を指定して、過去 1 時間または 2 時間のデータを取得できます。
-
-```json
-{
-  "longitude": 139.7673,
-  "latitude": 35.6809,
-  "past": 2
-}
-```
-
-## ライセンス
-
-ISC
-
-## 謝辞
-
-このプロジェクトは Yahoo!デベロッパーネットワークの[気象情報 API](https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/weather.html)を使用しています。
