@@ -58,8 +58,6 @@ async function fetchWeatherV1Place<T>(
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    console.log(response);
-
     return (await response.json()) as T;
   } catch (error) {
     console.error("Error making Yahoo Weather API request:", error);
